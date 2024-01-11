@@ -14,6 +14,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 button,
 input {
   display: block;
@@ -23,6 +27,7 @@ input {
 }
 
 body {
+  padding-top: 4rem;
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: "Spectral", georgia;
