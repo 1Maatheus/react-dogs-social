@@ -10,6 +10,7 @@ const types = {
     message: "Utilize apenas números.",
   },
 };
+
 const useForm = (type) => {
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState(null);
@@ -32,6 +33,7 @@ const useForm = (type) => {
     if (error) validate(target.value);
     setValue(target.value);
   }
+
   return {
     value,
     setValue,

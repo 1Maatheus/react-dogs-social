@@ -12,6 +12,7 @@ import Head from "../Helper/Head";
 const LoginForm = () => {
   const username = useForm();
   const password = useForm();
+
   const { userLogin, error, loading } = React.useContext(UserContext);
 
   async function handleSubmit(event) {
@@ -34,7 +35,7 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error} />
+        <Error error={error && "Dados incorretos."} />
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
         Esqueci a senha

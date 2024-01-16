@@ -10,12 +10,11 @@ import useMedias from "../../Hooks/useMedias";
 
 const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
-  const navigate = useNavigate();
   const mobile = useMedias("(max-width: 40rem)");
   const [mobileMenu, setMobileMenu] = React.useState(false);
+  const navigate = useNavigate();
 
   const { pathname } = useLocation();
-
   React.useEffect(() => {
     setMobileMenu(false);
   }, [pathname]);
@@ -55,8 +54,8 @@ const UserHeaderNav = () => {
           {mobile && "Adicionar Foto"}
         </NavLink>
         <button onClick={handleLogout}>
-          {mobile && "Sair"}
           <Sair />
+          {mobile && "Sair"}
         </button>
       </nav>
     </>

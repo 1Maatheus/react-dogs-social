@@ -1,5 +1,4 @@
 import React from "react";
-import User from "./User";
 import UserHeaderNav from "./UserHeaderNav";
 import styles from "./UserHeader.module.css";
 import { useLocation } from "react-router-dom";
